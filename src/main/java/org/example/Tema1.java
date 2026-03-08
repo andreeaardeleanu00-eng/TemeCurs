@@ -82,6 +82,7 @@ public class Tema1 {
     }
 
     public static double mediaTreiNumere(double a, double b, double c) {
+
         return (a + b + c) / 3.0;
     }
 
