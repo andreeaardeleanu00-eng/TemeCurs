@@ -1,6 +1,8 @@
 package Tema8;
 
 
+import org.openqa.selenium.WebDriver;
+
 public class Main {
 
     public static void main(String [] args) {
@@ -39,7 +41,7 @@ public class Main {
         System.out.println(" Produsul este: " + product1.getName() + "si costa " + product1.getPrice());
 
 
-        //EXERCITIU 4
+        //EXERCITIU 3
 
 
         Phone phone1 = new Phone();
@@ -48,13 +50,50 @@ public class Main {
         phone1.call();
 
 
-        //EXERCIITU 5
+        //EXERCIITU 4
 
         AdminAccount admin = new AdminAccount();
 
         admin.setUsername("Andreea2402");
         admin.login();
         admin.deleteUser();
+
+
+        //EXERCIITU 5
+
+        OnlineCourse course = new OnlineCourse("Testare automata", 30, "IT School");
+
+        System.out.println("Numele cursului este " + course.getCourseName() + " care a durat " + course.getDuration() + " pe platforma " + course.getPlatform());
+
+
+
+        //EXERCITIU 6
+
+        EmailNotification email = new EmailNotification();
+
+        email.setEmailAddress("test@gmail.com");
+        email.send();
+
+
+        //EXERCITIU 7
+
+        OnlineOrder order = new OnlineOrder(1001);
+
+        order.printOrder();
+        order.trackOrder();
+
+
+
+        //EXERCITIU 8
+
+        WebDriver driver = null;
+
+        LoginPage loginPage = new LoginPage(driver);
+
+        loginPage.openUrl("https://example.com/login");
+        loginPage.login("user1", "1234");
+
+
 
 
 
