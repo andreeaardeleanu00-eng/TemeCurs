@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Tabls Suite">
+    <test name="Close Tab Test">
+        <classes>
+            <class name="Tema6">
+                <methods>
+                    <include name="closeSecondTabAndReturn"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
